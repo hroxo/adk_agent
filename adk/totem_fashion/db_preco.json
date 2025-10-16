@@ -1,0 +1,212 @@
+[
+    {
+        "id": "000041145496004",
+        "name": "Casaco Bomber, Homem, Bege",
+        "brand": "MO",
+        "category": "Casaco Bomber",
+        "gender": "Homem",
+        "color": "bege",
+        "image": "image/000041145496004",
+        "price": 39.99
+    },
+    {
+        "id": "000041145711010",
+        "name": "Camisola de Malha, Homem, Cinzento Escuro",
+        "brand": "MO",
+        "category": "Camisola de Malha",
+        "gender": "Homem",
+        "color": "cinzento escuro",
+        "image": "image/000041145711010",
+        "price": 22.99
+    },
+    {
+        "id": "000041145653009",
+        "name": "Camisola de Malha, Homem, Castanho",
+        "brand": "MO",
+        "category": "Camisola de Malha",
+        "gender": "Homem",
+        "color": "castanho",
+        "image": "image/000041145653009",
+        "price": 19.99
+    },
+    {
+        "id": "000041145646019",
+        "name": "Polo Jersey, Homem, Verde",
+        "brand": "MO",
+        "category": "Polo Jersey",
+        "gender": "Homem",
+        "color": "verde",
+        "image": "image/000041145646019",
+        "price": 19.99
+    },
+    {
+        "id": "000041145496006",
+        "name": "Casaco Bomber, Homem, Azul Escuro",
+        "brand": "MO",
+        "category": "Casaco Bomber",
+        "gender": "Homem",
+        "color": "azul escuro",
+        "image": "image/000041145496006",
+        "price": 39.99
+    },
+    {
+        "id": "000041145959006",
+        "name": "Pijama Polar de Natal, Homem, Multicor",
+        "brand": "MO",
+        "category": "Pijama Polar de Natal",
+        "gender": "Homem",
+        "color": "multicor",
+        "image": "image/000041145959006",
+        "price": 19.99
+    },
+    {
+        "id": "000041145786021",
+        "name": "Camisola de Malha, Mulher, Branco",
+        "brand": "MO",
+        "category": "Camisola de Malha",
+        "gender": "Mulher",
+        "color": "branco",
+        "image": "image/000041145786021",
+        "price": 22.99
+    },
+    {
+        "id": "000041146081010",
+        "name": "Calças Loose Fit, Mulher, Cinzento Escuro",
+        "brand": "MO",
+        "category": "Calças Loose Fit",
+        "gender": "Mulher",
+        "color": "cinzento escuro",
+        "image": "image/000041146081010",
+        "price": 19.99
+    },
+    {
+        "id": "000041145446021",
+        "name": "Camisola de Malha, Mulher, Bege",
+        "brand": "MO",
+        "category": "Camisola de Malha",
+        "gender": "Mulher",
+        "color": "bege",
+        "image": "image/000041145446021",
+        "price": 25.99
+    },
+    {
+        "id": "000041145983006",
+        "name": "Pijama Polar de Natal, Mulher, Multicor",
+        "brand": "MO",
+        "category": "Pijama Polar de Natal",
+        "gender": "Mulher",
+        "color": "multicor",
+        "image": "image/000041145983006",
+        "price": 19.99
+    },
+    {
+        "id": "000041144180021",
+        "name": "Casaco Acolchoado, Mulher, Bege Claro",
+        "brand": "MO",
+        "category": "Casaco Acolchoado",
+        "gender": "Mulher",
+        "color": "bege claro",
+        "image": "image/000041144180021",
+        "price": 39.99
+    },
+    {
+        "id": "000041144144041",
+        "name": "Casaco Bomber, Mulher, Branco",
+        "brand": "MO",
+        "category": "Casaco Bomber",
+        "gender": "Mulher",
+        "color": "branco",
+        "image": "image/000041144144041",
+        "price": 27.99
+    },
+    {
+        "id": "000041145057021",
+        "name": "Vestido Comprido de Riscas, Mulher, Bege Claro",
+        "brand": "MO",
+        "category": "Vestido Comprido de Riscas",
+        "gender": "Mulher",
+        "color": "bege claro",
+        "image": "image/000041145057021",
+        "price": 19.99
+    },
+    {
+        "id": "000041143649019",
+        "name": "Vestido Liocel, Mulher, Verde",
+        "brand": "MO",
+        "category": "Vestido Liocel",
+        "gender": "Mulher",
+        "color": "verde",
+        "image": "image/000041143649019",
+        "price": 25.99
+    },
+    {
+        "id": "000041143657038",
+        "name": "Vestido Comprido em Crochet, Mulher, Rosa",
+        "brand": "MO",
+        "category": "Vestido Comprido em Crochet",
+        "gender": "Mulher",
+        "color": "rosa",
+        "image": "image/000041143657038",
+        "price": 22.99
+    },
+    {
+        "id": "000041143707001",
+        "name": "Calças de Ganga Skinny, Mulher, Bege",
+        "brand": "MO",
+        "category": "Calças de Ganga Skinny",
+        "gender": "Mulher",
+        "color": "bege",
+        "image": "image/000041143707001",
+        "price": 12.99
+    },
+    {
+        "id": "000041143648002",
+        "name": "Calças Marine, Mulher, Preto",
+        "brand": "MO",
+        "category": "Calças Marine",
+        "gender": "Mulher",
+        "color": "preto",
+        "image": "image/000041143648002",
+        "price": 22.99
+    },
+    {
+        "id": "000041145798038",
+        "name": "Calças de Ganga Wide Leg, Mulher, Rosa",
+        "brand": "MO",
+        "category": "Calças de Ganga Wide Leg",
+        "gender": "Mulher",
+        "color": "rosa",
+        "image": "image/000041145798038",
+        "price": 19.99
+    },
+    {
+        "id": "000041099669022",
+        "name": "Calças de Ganga Slim Straight, Mulher, Azul Claro",
+        "brand": "MO",
+        "category": "Calças de Ganga Slim Straight",
+        "gender": "Mulher",
+        "color": "azul claro",
+        "image": "image/000041099669022",
+        "price": 12.99
+    },
+    {
+        "id": "000041032126217",
+        "name": "Jeans Slim Fit, Mulher, Preto",
+        "brand": "MO",
+        "category": "Jeans Slim Fit",
+        "gender": "Mulher",
+        "color": "preto",
+        "image": "image/000041032126217",
+        "price": 12.99
+    },
+    {
+        "id": "000041145432020",
+        "name": "Polo em Malha, Mulher, Cinzento",
+        "brand": "MO",
+        "category": "Polo em Malha",
+        "gender": "Mulher",
+        "color": "cinzento",
+        "image": "image/000041145432020",
+        "price": 25.99
+    }
+]

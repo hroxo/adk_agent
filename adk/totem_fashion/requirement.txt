@@ -1,0 +1,21 @@
+# --- Core Google ADK e IA ---
+google-adk>=0.3.0
+google-cloud-aiplatform>=1.64.0
+google-auth>=2.33.0
+google-generativeai>=0.6.0
+
+# --- Comunicação e APIs ---
+requests>=2.31.0
+httpx>=0.27.0
+fastapi>=0.115.0
+uvicorn>=0.30.0
+
+# --- Manipulação e dados ---
+pydantic>=2.9.0
+python-dotenv>=1.0.1
+firebase-admin>=6.5.0
+
+# --- Desenvolvimento e ferramentas ---
+pytest>=8.3.0
+black>=24.3.0
+flake8>=7.1.0
