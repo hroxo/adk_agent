@@ -1,28 +1,41 @@
-"""
-FastAPI application exposing the Fashion Stylist agent.
-
-This module defines the web API endpoints that the mirror frontend can call to
-interact with the underlying agent. The API is intentionally simple and
-stateless except for the session_id passed by the client.
-"""
-
 from __future__ import annotations
 
-from fastapi import FastAPI, HTTPException, Query
+import os
+from fastapi import FastAPI, Query
 from pydantic import BaseModel
+
+# 1) Carrega .env em ambiente de desenvolvimento (ignora se não existir)
+try:
+    from dotenv import load_dotenv
+    from pathlib import Path
+    # Sobe um nível: api/ -> totem_fashion/
+    env_path = Path(__file__).resolve().parent.parent / ".env"
+    load_dotenv(dotenv_path=env_path)
+except Exception as e:
+    print(f"⚠️  Não foi possível carregar .env: {e}")
+
+# 2) (Opcional) Configurar Gemini via API key (local .env ou secret em Firebase)
+try:
+    import google.generativeai as genai
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if api_key:
+        genai.configure(api_key=api_key)
+except Exception:
+    # Mantém a app a funcionar mesmo que a lib não esteja instalada
+    pass
+
+MODEL_NAME = os.environ.get("MODEL_NAME", "gemini-2.5-pro")
 
 from ..agent.agent import FashionStylistAgent
 
-
 app = FastAPI(title="Totem Fashion Finder Agent API")
 
-# Global agent instance (would be dependency-injected in a larger app)
+# Instância "global" do agente (podes trocar para DI se quiseres)
 agent = FashionStylistAgent()
 
 
 class ProductInput(BaseModel):
     """Pydantic model to validate product data from the client."""
-
     id: str
     name: str | None = None
     category: str | None = None
@@ -31,6 +44,11 @@ class ProductInput(BaseModel):
     brand: str | None = None
     image: str | None = None
     gender: str | None = None
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok", "model": MODEL_NAME}
 
 
 @app.get("/discover")
@@ -57,8 +75,6 @@ def get_outfit(
     seed_id: str,
     budget: float | None = Query(default=None, description="Optional budget for the outfit"),
 ):
-    """Compose an outfit from a seed product id."""
-    try:
-        return agent.create_outfit_from_seed(session_id=session_id, seed_id=seed_id, budget=budget)
-    except ValueError as exc:
-        raise HTTPException(status_code=404, detail=str(exc))
+    """Create a coordinated outfit from a seed item."""
+    return agent.create_outfit_from_seed(session_id=session_id, seed_id=seed_id, budget=budget)
+
