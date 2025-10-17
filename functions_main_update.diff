@@ -1,0 +1,140 @@
+*** Begin Patch
+*** Delete File: functions/main.py
+*** End Patch
+
+*** Begin Patch
+*** Add File: functions/main.py
++import asyncio
++import os
++from pathlib import Path
++
++from firebase_functions import https_fn
++from firebase_functions.options import set_global_options
++
++# Load environment variables from the .env file in adk/totem_fashion for local development.
++# In production on Firebase Functions, secrets should be configured via
++# `firebase functions:secrets:set GEMINI_API_KEY` and similar commands.
++try:
++    from dotenv import load_dotenv
++
++    # Compute the path to `adk/totem_fashion/.env` relative to this file.
++    env_path = (
++        Path(__file__).resolve().parent.parent
++        / "adk"
++        / "totem_fashion"
++        / ".env"
++    )
++    load_dotenv(dotenv_path=env_path)
++except Exception:
++    # Ignore if dotenv is not available or the file is missing.
++    pass
++
++# Import the FastAPI application and the ADK agent factory.
++from adk.totem_fashion.api.app import app as fastapi_app
++from adk.totem_fashion.adk_fashion_agent import create_stylist_agent
++from vertexai.agent_engines import AdkApp
++
++# Restrict concurrent instances per function to control costs.
++set_global_options(max_instances=10)
++
++# Determine the Gemini model name to use. Defaults to `gemini-2.5-pro`.
++DEFAULT_MODEL_NAME = os.environ.get("MODEL_NAME", "gemini-2.5-pro")
++
++# Instantiate the Gemini-based stylist agent using the ADK factory.
++agent = create_stylist_agent(model_name=DEFAULT_MODEL_NAME)
++
++# Wrap the agent in an ASGI application via Vertex AI's AdkApp.
++adk_app = AdkApp(agent=agent)
++
++
++def _build_scope(req: https_fn.Request) -> dict:
++    """
++    Build a minimal ASGI scope from the incoming Firebase request.
++
++    Args:
++        req: Incoming request from Firebase Functions.
++
++    Returns:
++        A dictionary representing the ASGI scope.
++    """
++    headers = [(k.lower().encode(), v.encode()) for k, v in req.headers.items()]
++    qs = (
++        req.query_string
++        if isinstance(req.query_string, (bytes, bytearray))
++        else (req.query_string or "").encode()
++    )
++    return {
++        "type": "http",
++        "http_version": "1.1",
++        "method": req.method,
++        "path": req.path,
++        "raw_path": req.path.encode(),
++        "query_string": qs,
++        "headers": headers,
++        "scheme": "https",
++        "server": ("functions", 443),
++        "client": ("", 0),
++    }
++
++
++async def _run_asgi(app, scope, body: bytes) -> tuple[int, list[tuple[bytes, bytes]], bytes]:
++    """
++    Execute an ASGI app and capture the HTTP response.
++
++    Args:
++        app: The ASGI application to run (FastAPI app or ADK app).
++        scope: The ASGI scope describing the request.
++        body: Raw request body.
++
++    Returns:
++        A tuple of (status_code, headers, body).
++    """
++
++    async def receive():
++        return {"type": "http.request", "body": body, "more_body": False}
++
++    status, headers, chunks = 200, [], bytearray()
++
++    async def send(message):
++        nonlocal status, headers, chunks
++        if message["type"] == "http.response.start":
++            status = message.get("status", 200)
++            headers = message.get("headers", [])
++        elif message["type"] == "http.response.body":
++            chunks.extend(message.get("body", b""))
++
++    await app(scope, receive, send)
++    return status, headers, bytes(chunks)
++
++
++@https_fn.on_request()
++def totem_api(req: https_fn.Request) -> https_fn.Response:
++    """
++    Entry point for the FastAPI application under Firebase Functions.
++
++    This exposes all endpoints defined in `adk.totem_fashion.api.app`. For example,
++    calls to `/discover`, `/swipe/like`, `/swipe/dislike` and `/outfit` will be
++    routed through this function.
++    """
++    scope = _build_scope(req)
++    body = req.get_data() or b""
++    status, headers, payload = asyncio.run(_run_asgi(fastapi_app, scope, body))
++    hdrs = {k.decode(): v.decode() for k, v in headers}
++    return https_fn.Response(response=payload, status=status, headers=hdrs)
++
++
++@https_fn.on_request()
++def adk_webhook(req: https_fn.Request) -> https_fn.Response:
++    """
++    Webhook for the Agent Development Kit (ADK).
++
++    Configure your agent in the Google Cloud console (Agent Builder) to send
++    webhook events to this function's URL. The ADK will handle the request
++    using the Gemini-powered stylist agent defined in `adk_fashion_agent.py`.
++    """
++    scope = _build_scope(req)
++    body = req.get_data() or b""
++    status, headers, payload = asyncio.run(_run_asgi(adk_app, scope, body))
++    hdrs = {k.decode(): v.decode() for k, v in headers}
++    return https_fn.Response(response=payload, status=status, headers=hdrs)
+*** End Patch
