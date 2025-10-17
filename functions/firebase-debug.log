@@ -1,0 +1,283 @@
+[debug] [2025-10-17T01:32:31.105Z] ----------------------------------------------------------------------
+[debug] [2025-10-17T01:32:31.111Z] Command:       /Users/hugoroxo/.nvm/versions/node/v22.19.0/bin/node /Users/hugoroxo/.npm-global/bin/firebase emulators:start --only functions
+[debug] [2025-10-17T01:32:31.112Z] CLI Version:   14.20.0
+[debug] [2025-10-17T01:32:31.112Z] Platform:      darwin
+[debug] [2025-10-17T01:32:31.112Z] Node Version:  v22.19.0
+[debug] [2025-10-17T01:32:31.113Z] Time:          Fri Oct 17 2025 02:32:31 GMT+0100 (Western European Summer Time)
+[debug] [2025-10-17T01:32:31.113Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-10-17T01:32:31.387Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-10-17T01:32:31.387Z] > authorizing via signed-in user (hugo.roxo04@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2025-10-17T01:32:31.647Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-17T01:32:31.647Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-10-17T01:32:31.652Z] Emulator locator file path: /var/folders/gw/1gdgzb212dqdpmwvlnt074jh0000gn/T/hub-the-42-closet.json
+[debug] [2025-10-17T01:32:31.652Z] [hub] writing locator at /var/folders/gw/1gdgzb212dqdpmwvlnt074jh0000gn/T/hub-the-42-closet.json
+[debug] [2025-10-17T01:32:31.930Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-17T01:32:31.930Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-17T01:32:31.930Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-10-17T01:32:31.931Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2025-10-17T01:32:31.943Z] defaultcredentials: writing to file /Users/hugoroxo/.config/firebase/hugo_roxo04_gmail.com_application_default_credentials.json
+[debug] [2025-10-17T01:32:31.944Z] Setting GAC to /Users/hugoroxo/.config/firebase/hugo_roxo04_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/hugoroxo/.config/firebase/hugo_roxo04_gmail.com_application_default_credentials.json"}}
+[debug] [2025-10-17T01:32:31.945Z] Checked if tokens are valid: true, expires at: 1760665695649
+[debug] [2025-10-17T01:32:31.945Z] Checked if tokens are valid: true, expires at: 1760665695649
+[debug] [2025-10-17T01:32:31.946Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-42-closet/adminSdkConfig [none]
+[debug] [2025-10-17T01:32:32.310Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-42-closet/adminSdkConfig 200
+[debug] [2025-10-17T01:32:32.311Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-42-closet/adminSdkConfig {"projectId":"the-42-closet","storageBucket":"the-42-closet.firebasestorage.app"}
+[info] i  functions: Watching "/Users/hugoroxo/Desktop/3-the-42-ducks/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions\" for Cloud Functions..."}}
+[debug] [2025-10-17T01:32:32.381Z] Customer code is not Node
+[debug] [2025-10-17T01:32:32.382Z] Validating python source
+[debug] [2025-10-17T01:32:32.382Z] Building python source
+[debug] [2025-10-17T01:32:32.384Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T01:32:32.399Z] Running command with virtualenv: command=., args=["\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/bin/activate\"","&&","python3.13","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2025-10-17T01:32:32.482Z] stdout: /Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions
+
+[debug] [2025-10-17T01:32:32.486Z] Running admin server with args: ["python3.13","\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"the-42-closet","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"the-42-closet","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","CLOUD_TASKS_EMULATOR_HOST":"127.0.0.1:9499","FIREBASE_CONFIG":"{\"storageBucket\":\"the-42-closet.firebasestorage.app\",\"projectId\":\"the-42-closet\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/hugoroxo/.config/firebase/hugo_roxo04_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/hugoroxo/Desktop/3-the-42-ducks/functions
+[debug] [2025-10-17T01:32:32.486Z] Running command with virtualenv: command=., args=["\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/bin/activate\"","&&","python3.13","\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [17/Oct/2025 01:32:33] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2025-10-17T01:32:33.573Z] Got response from /__/functions.yaml endpoints:
+  adk_webhook:
+    availableMemoryMb: null
+    concurrency: null
+    cpu: gcf_gen1
+    entryPoint: adk_webhook
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: 10
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  totem_api:
+    availableMemoryMb: null
+    concurrency: null
+    cpu: gcf_gen1
+    entryPoint: totem_api
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: 10
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [17/Oct/2025 01:32:33] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 77058 Terminated: 15          python3.13 "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: adk_webhook, totem_api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: adk_webhook, totem_api."}}
+[info] ✔  functions[us-central1-adk_webhook]: http function initialized (http://127.0.0.1:5001/the-42-closet/us-central1/adk_webhook). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/the-42-closet/us-central1/adk_webhook)."}}
+[info] ✔  functions[us-central1-totem_api]: http function initialized (http://127.0.0.1:5001/the-42-closet/us-central1/totem_api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/the-42-closet/us-central1/totem_api)."}}
+[debug] [2025-10-17T01:32:33.601Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2025-10-17T01:32:33.622Z] File /Users/hugoroxo/Desktop/3-the-42-ducks/functions/__pycache__/main.cpython-313.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/hugoroxo/Desktop/3-the-42-ducks/functions/__pycache__/main.cpython-313.pyc changed, reloading triggers"}}
+[debug] [2025-10-17T01:32:34.623Z] Customer code is not Node
+[debug] [2025-10-17T01:32:34.623Z] Validating python source
+[debug] [2025-10-17T01:32:34.624Z] Building python source
+[debug] [2025-10-17T01:32:34.624Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T01:32:34.626Z] Running command with virtualenv: command=., args=["\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/bin/activate\"","&&","python3.13","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2025-10-17T01:32:34.701Z] stdout: /Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions
+
+[debug] [2025-10-17T01:32:34.705Z] Running admin server with args: ["python3.13","\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"the-42-closet","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"the-42-closet","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","CLOUD_TASKS_EMULATOR_HOST":"127.0.0.1:9499","FIREBASE_CONFIG":"{\"storageBucket\":\"the-42-closet.firebasestorage.app\",\"projectId\":\"the-42-closet\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/hugoroxo/.config/firebase/hugo_roxo04_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/hugoroxo/Desktop/3-the-42-ducks/functions
+[debug] [2025-10-17T01:32:34.706Z] Running command with virtualenv: command=., args=["\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/bin/activate\"","&&","python3.13","\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [17/Oct/2025 01:32:35] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2025-10-17T01:32:35.279Z] Got response from /__/functions.yaml endpoints:
+  adk_webhook:
+    availableMemoryMb: null
+    concurrency: null
+    cpu: gcf_gen1
+    entryPoint: adk_webhook
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: 10
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  totem_api:
+    availableMemoryMb: null
+    concurrency: null
+    cpu: gcf_gen1
+    entryPoint: totem_api
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: 10
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [17/Oct/2025 01:32:35] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 77067 Terminated: 15          python3.13 "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: adk_webhook, totem_api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: adk_webhook, totem_api."}}
+[debug] [2025-10-17T01:32:41.429Z] [work-queue] {"queuedWork":["/the-42-closet/us-central1/adk_webhook-2025-10-17T01:32:41.428Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2025-10-17T01:32:41.429Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/the-42-closet/us-central1/adk_webhook-2025-10-17T01:32:41.428Z"],"workRunningCount":1}
+[debug] [2025-10-17T01:32:41.430Z] Accepted request POST /the-42-closet/us-central1/adk_webhook --> us-central1-adk_webhook
+[debug] [2025-10-17T01:32:41.434Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2025-10-17T01:32:41.436Z] [functions] Got req.url=/the-42-closet/us-central1/adk_webhook, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/the-42-closet/us-central1/adk_webhook, mapping to path=/"}}
+[debug] [2025-10-17T01:32:41.440Z] Running command with virtualenv: command=., args=["\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2025-10-17T01:32:41.442Z] [worker-pool] addWorker(us-central1-adk_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-adk_webhook)"}}
+[debug] [2025-10-17T01:32:41.443Z] [worker-pool] Adding worker with key us-central1-adk_webhook, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-adk_webhook, total=1"}}
+[debug] [2025-10-17T01:32:42.360Z] File /Users/hugoroxo/Desktop/3-the-42-ducks/functions/adk/totem_fashion/__pycache__/adk_fashion_agent.cpython-313.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/hugoroxo/Desktop/3-the-42-ducks/functions/adk/totem_fashion/__pycache__/adk_fashion_agent.cpython-313.pyc changed, reloading triggers"}}
+[debug] [2025-10-17T01:32:43.362Z] Customer code is not Node
+[debug] [2025-10-17T01:32:43.362Z] Validating python source
+[debug] [2025-10-17T01:32:43.362Z] Building python source
+[debug] [2025-10-17T01:32:43.362Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-10-17T01:32:43.363Z] Running command with virtualenv: command=., args=["\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/bin/activate\"","&&","python3.13","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2025-10-17T01:32:43.421Z] stdout: /Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions
+
+[debug] [2025-10-17T01:32:43.425Z] Running admin server with args: ["python3.13","\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"the-42-closet","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"the-42-closet","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","CLOUD_TASKS_EMULATOR_HOST":"127.0.0.1:9499","FIREBASE_CONFIG":"{\"storageBucket\":\"the-42-closet.firebasestorage.app\",\"projectId\":\"the-42-closet\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/hugoroxo/.config/firebase/hugo_roxo04_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/hugoroxo/Desktop/3-the-42-ducks/functions
+[debug] [2025-10-17T01:32:43.425Z] Running command with virtualenv: command=., args=["\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/bin/activate\"","&&","python3.13","\"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [17/Oct/2025 01:32:43] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2025-10-17T01:32:43.996Z] Got response from /__/functions.yaml endpoints:
+  adk_webhook:
+    availableMemoryMb: null
+    concurrency: null
+    cpu: gcf_gen1
+    entryPoint: adk_webhook
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: 10
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  totem_api:
+    availableMemoryMb: null
+    concurrency: null
+    cpu: gcf_gen1
+    entryPoint: totem_api
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: 10
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [17/Oct/2025 01:32:44] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 77081 Terminated: 15          python3.13 "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: adk_webhook, totem_api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: adk_webhook, totem_api."}}
+[info] >  [2025-10-17 01:32:50,620] ERROR in app: Exception on /__/health [GET] {"user":"[2025-10-17 01:32:50,620] ERROR in app: Exception on /__/health [GET]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m [2025-10-17 01:32:50,620] ERROR in app: Exception on /__/health [GET]"}}
+[info] >  Traceback (most recent call last): {"user":"Traceback (most recent call last):","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m Traceback (most recent call last):"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 1511, in wsgi_app","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 1511, in wsgi_app"}}
+[info] >      response = self.full_dispatch_request() {"user":"    response = self.full_dispatch_request()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     response = self.full_dispatch_request()"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 919, in full_dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 919, in full_dispatch_request"}}
+[info] >      rv = self.handle_user_exception(e) {"user":"    rv = self.handle_user_exception(e)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     rv = self.handle_user_exception(e)"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 917, in full_dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 917, in full_dispatch_request"}}
+[info] >      rv = self.dispatch_request() {"user":"    rv = self.dispatch_request()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     rv = self.dispatch_request()"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 902, in dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 902, in dispatch_request"}}
+[info] >      return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return] {"user":"    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]"}}
+[info] >             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^ {"user":"           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/execution_id.py", line 157, in wrapper {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/execution_id.py\", line 157, in wrapper","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/execution_id.py\", line 157, in wrapper"}}
+[info] >      result = view_function(*args, **kwargs) {"user":"    result = view_function(*args, **kwargs)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     result = view_function(*args, **kwargs)"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/__init__.py", line 142, in view_func {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/__init__.py\", line 142, in view_func","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/__init__.py\", line 142, in view_func"}}
+[info] >      return function(request._get_current_object()) {"user":"    return function(request._get_current_object())","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     return function(request._get_current_object())"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/https_fn.py", line 439, in on_request_wrapped {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/https_fn.py\", line 439, in on_request_wrapped","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/https_fn.py\", line 439, in on_request_wrapped"}}
+[info] >      return func(request) {"user":"    return func(request)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     return func(request)"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py", line 83, in adk_webhook {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py\", line 83, in adk_webhook","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py\", line 83, in adk_webhook"}}
+[info] >      adk_app = get_adk_app() {"user":"    adk_app = get_adk_app()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     adk_app = get_adk_app()"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py", line 66, in get_adk_app {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py\", line 66, in get_adk_app","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py\", line 66, in get_adk_app"}}
+[info] >      from google.adk.agent_engines import AdkApp  # IMPORTA O AdkApp do google.adk {"user":"    from google.adk.agent_engines import AdkApp  # IMPORTA O AdkApp do google.adk","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     from google.adk.agent_engines import AdkApp  # IMPORTA O AdkApp do google.adk"}}
+[info] >      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >  ModuleNotFoundError: No module named 'google.adk.agent_engines' {"user":"ModuleNotFoundError: No module named 'google.adk.agent_engines'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m ModuleNotFoundError: No module named 'google.adk.agent_engines'"}}
+[debug] [2025-10-17T01:32:50.646Z] [worker-us-central1-adk_webhook-f2695a80-cae1-47bc-a19f-df477d3832d5]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"[worker-us-central1-adk_webhook-f2695a80-cae1-47bc-a19f-df477d3832d5]: IDLE"}}
+[debug] [2025-10-17T01:32:50.647Z] [worker-pool] submitRequest(triggerId=us-central1-adk_webhook) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-adk_webhook)"}}
+[info] i  functions: Beginning execution of "us-central1-adk_webhook" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"Beginning execution of \"us-central1-adk_webhook\""}}
+[debug] [2025-10-17T01:32:50.648Z] [worker-us-central1-adk_webhook-f2695a80-cae1-47bc-a19f-df477d3832d5]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"[worker-us-central1-adk_webhook-f2695a80-cae1-47bc-a19f-df477d3832d5]: BUSY"}}
+[info] >  [2025-10-17 01:32:50,651] ERROR in app: Exception on / [POST] {"user":"[2025-10-17 01:32:50,651] ERROR in app: Exception on / [POST]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m [2025-10-17 01:32:50,651] ERROR in app: Exception on / [POST]"}}
+[info] >  Traceback (most recent call last): {"user":"Traceback (most recent call last):","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m Traceback (most recent call last):"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py", line 1511, in wsgi_app {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 1511, in wsgi_app","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 1511, in wsgi_app"}}
+[info] >      response = self.full_dispatch_request() {"user":"    response = self.full_dispatch_request()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     response = self.full_dispatch_request()"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py", line 919, in full_dispatch_request {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 919, in full_dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 919, in full_dispatch_request"}}
+[info] >      rv = self.handle_user_exception(e) {"user":"    rv = self.handle_user_exception(e)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     rv = self.handle_user_exception(e)"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py", line 917, in full_dispatch_request {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 917, in full_dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 917, in full_dispatch_request"}}
+[info] >      rv = self.dispatch_request() {"user":"    rv = self.dispatch_request()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     rv = self.dispatch_request()"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py", line 902, in dispatch_request {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 902, in dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/flask/app.py\", line 902, in dispatch_request"}}
+[info] >      return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return] {"user":"    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]"}}
+[info] >             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^ {"user":"           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/execution_id.py", line 157, in wrapper {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/execution_id.py\", line 157, in wrapper","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/execution_id.py\", line 157, in wrapper"}}
+[info] >      result = view_function(*args, **kwargs) {"user":"    result = view_function(*args, **kwargs)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     result = view_function(*args, **kwargs)"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/__init__.py", line 142, in view_func {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/__init__.py\", line 142, in view_func","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/functions_framework/__init__.py\", line 142, in view_func"}}
+[info] >      return function(request._get_current_object()) {"user":"    return function(request._get_current_object())","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     return function(request._get_current_object())"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/https_fn.py", line 439, in on_request_wrapped {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/https_fn.py\", line 439, in on_request_wrapped","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/venv/lib/python3.13/site-packages/firebase_functions/https_fn.py\", line 439, in on_request_wrapped"}}
+[info] >      return func(request) {"user":"    return func(request)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     return func(request)"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py", line 83, in adk_webhook {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py\", line 83, in adk_webhook","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py\", line 83, in adk_webhook"}}
+[info] >      adk_app = get_adk_app() {"user":"    adk_app = get_adk_app()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     adk_app = get_adk_app()"}}
+[info] >    File "/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py", line 66, in get_adk_app {"user":"  File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py\", line 66, in get_adk_app","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/hugoroxo/Desktop/3-the-42-ducks/functions/main.py\", line 66, in get_adk_app"}}
+[info] >      from google.adk.agent_engines import AdkApp  # IMPORTA O AdkApp do google.adk {"user":"    from google.adk.agent_engines import AdkApp  # IMPORTA O AdkApp do google.adk","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     from google.adk.agent_engines import AdkApp  # IMPORTA O AdkApp do google.adk"}}
+[info] >      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >  ModuleNotFoundError: No module named 'google.adk.agent_engines' {"user":"ModuleNotFoundError: No module named 'google.adk.agent_engines'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"\u001b[90m> \u001b[39m ModuleNotFoundError: No module named 'google.adk.agent_engines'"}}
+[debug] [2025-10-17T01:32:50.666Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-adk_webhook" in 18.531438ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"Finished \"us-central1-adk_webhook\" in 18.531438ms"}}
+[debug] [2025-10-17T01:32:50.667Z] [worker-us-central1-adk_webhook-f2695a80-cae1-47bc-a19f-df477d3832d5]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"[worker-us-central1-adk_webhook-f2695a80-cae1-47bc-a19f-df477d3832d5]: IDLE"}}
+[debug] [2025-10-17T01:32:50.667Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2025-10-17T01:32:50.669Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-adk_webhook"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2025-10-17T01:32:50.669Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
